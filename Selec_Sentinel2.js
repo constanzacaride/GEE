@@ -1,5 +1,5 @@
 //OPCIÓN A: Elegir la zona de interés (geometry) -> se incorporará arriba como variable
-//OPCIÓN B: 
+//OPCIÓN B: Si tengo un shapefile en los assets lo abro y le cambio el nombre a geometry. 
 
 //Elegir la ventana de tiempo que quiero explorar 
 var Inicio = '2024-09-20';
