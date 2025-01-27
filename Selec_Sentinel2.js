@@ -1,4 +1,5 @@
-//Elegir la zona de interés (geometry) -> se incorporará arriba como variable
+//OPCIÓN A: Elegir la zona de interés (geometry) -> se incorporará arriba como variable
+//OPCIÓN B: 
 
 //Elegir la ventana de tiempo que quiero explorar 
 var Inicio = '2024-09-20';
@@ -6,16 +7,17 @@ var Fin = '2024-10-01';
 
 //Defino el producto que quiero buscar y selecciona las imágenes disponibles para ese sitio entre esas fechas
 var S2 = ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")
-.filterDate(Inicio, Fin)
-.filterBounds(geometry); 
+.filterBounds(geometry)
+.filterDate(Inicio, Fin); 
 
 //Imprime la lista de imágenes en la consola
 print(S2);
 
 //Parámetros de visualización (falso color y color real)
-var pvS2tc = {"opacity":1,"bands":['B4','B3','B2'],'min': 0, 'max': 3000,gamma:1};
-var pvS2veg = {"opacity":1,"bands":['B8','B11','B4'],'min': 0, 'max': 3000,gamma:1}; //... 4-5-3= 8-11-4 (IRC, IRM, Rojo)
-var pvS2fu = {"opacity":1,"bands":['B12','B8','B2'],'min': 0, 'max': 3000,gamma:1}; //(IRM, IRC, Azul)
+var pvS2tc = {"opacity":1,"bands":['B4','B3','B2'],'min': 0, 'max': 3000,gamma:1}; // True Color R, G, B
+var pvS2veg = {"opacity":1,"bands":['B8','B11','B4'],'min': 0, 'max': 3000,gamma:1}; // Vegetación IRC, IRM, Rojo
+var pvS2fu = {"opacity":1,"bands":['B12','B8','B2'],'min': 0, 'max': 3000,gamma:1}; // Fuego IRM, IRC, Azul
+var pvS2ag = {"opacity":1,"bands":['B12','B11','B4'],'min': 0, 'max': 3000,gamma:1}; // Agua SWIR 2, SWIR 1, Rojo
 
 //Función que despliega las imágnes en el mapa (si quiero otra combinación de badas cambio los param de vis)
 function addImageS2(image) { 
