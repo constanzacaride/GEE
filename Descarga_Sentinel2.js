@@ -23,10 +23,10 @@ Banda 12	    20		    2.10 - 2.28               SWIR 2
 var sysID1 = '20240928T141709_20240928T142307_T20JKL'; //CAMBIAR img!!!
 var Img = ee.Image('COPERNICUS/S2/' + sysID1)
 .select(['B12','B8','B2']); //CAMBIAR bandas!!!
-//Color Natural R-G-B -> 4 3 2 
-//Fuego SWIR 2-NIR1-BLUE -> 12 8 2
-//Agua SWIR 2-SWIR 1-Rojo -> 12 11 4
-//Vegetación NIR1, SWIR 1, Rojo -> 8 11 4
+//Color Natural R,G,B -> 4,3,2 
+//Fuego SWIR2,NIR1,BLUE -> 12,8,2
+//Agua SWIR2,SWIR1,Rojo -> 12,11,4
+//Vegetación NIR1,SWIR 1,Rojo -> 8,11,4
 
 //Exportamos la imagen (En el nombre figura el sensor y la fecha de la img)
 Export.image.toDrive({
