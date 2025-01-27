@@ -22,10 +22,10 @@ Banda 12	    30		    Banda de calidad          (BQA.TIF)
 var scID1 = 'LC82300822024272LGN00'; //CAMBIAR img!!!
 var Img = ee.Image('LANDSAT/LC08/C02/T1_L2/' + scID1) //CAMBIAR sensor si hace falta (8/9)!!!
 .select(['SR_B7','SR_B5','SR_B2']); //CAMBIAR bandas si hace falta!!!
-//Color Natural R-G-B -> 4 3 2
-//Fuego SWIR 2-NIR-BLUE -> 7 5 2
-//Agua SWIR 2-SWIR 1-Rojo -> 7 6 4
-//Vegetación NIR, SWIR 1, Rojo -> 5 6 4
+//Color Natural R,G,B -> 4,3,2
+//Fuego SWIR2,NIR,BLUE -> 7,5,2
+//Agua SWIR2,SWIR1,Rojo -> 7,6,4
+//Vegetación NIR,SWIR1,Rojo -> 5,6,4
 //La pancromática debe bajarse sola, por separado.
 
 //Exportamos la imagen (En el nombre figura el sensor y el path-Row)
