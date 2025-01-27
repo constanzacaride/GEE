@@ -29,7 +29,7 @@ print(L9);
 var pvL89c2tc = {"opacity":1,"bands":["SR_B4","SR_B3","SR_B2"],"min":7230,"max":41434,"gamma":1}; //True color R, G, B
 var pvL89c2veg = {"opacity":1,"bands":["SR_B5","SR_B6","SR_B4"],"min":7230,"max":41434,"gamma":1}; // Vegetación IRC, IRM, Rojo
 var pvL89c2fu = {"opacity":1,"bands":["SR_B7","SR_B5","SR_B2"],"min":7230,"max":41434,"gamma":1}; //Fuego IRM, IRC, Azul
-var pvS2ag = {"opacity":1,"bands":['B12','B11','B4'],'min': 0, 'max': 3000,gamma:1}; //Agua SWIR 2, SWIR 1, Rojo
+var pvS2ag = {"opacity":1,"bands":['SR_B7','SR_B6','SR_B4'],'min': 0, 'max': 3000,gamma:1}; //Agua SWIR 2, SWIR 1, Rojo
 
 //Función que despliega las imágnes en el mapa (si quiero otra combinación de badas cambio los param de vis)
 function addImageL8(image) { 
