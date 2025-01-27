@@ -39,7 +39,7 @@ Export.image.toDrive({
       maxPixels: 1e12,
     });
 
-//**************HACE LA CLASIFICACIÓN (MÁSCARA) DE LOS VALORES DE NDVI > 0.4****************
+//**********HACE LA CLASIFICACIÓN (MÁSCARA) DE LOS VALORES DE NDVI > AL THRESHOLD**********
 
 // Genro la máscara
 var threshold = 0.4;
